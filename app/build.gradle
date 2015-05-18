@@ -1,12 +1,12 @@
-apply plugin: 'com.android.library'
-
+apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 8
+        applicationId "com.andreabaccega.edittextformexample"
+        minSdkVersion 14
+        targetSdkVersion 14
     }
 
     buildTypes {
@@ -15,4 +15,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
+    compile project(':library')
 }
